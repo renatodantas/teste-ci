@@ -14,7 +14,23 @@ Os projetos `modulo-teste1` e `modulo-teste2` possuem dependência com o projeto
 ## Endereços de acesso
 
 - Artifactory: http://localhost:9001
-- Teamcity: http://localhost:9002
+- TeamCity: http://localhost:9002
 - Gitlab: http://localhost:9003
   - HTTPS: http://localhost:9443
   - SSH: http://localhost:9022
+
+## Configurações
+
+### Artifactory
+
+- Acesse o endereço acima relacionado ao Artifactory;
+- Crie a senha do administrador;
+- Se houver proxy para configurar, preencha-o;
+- Selecione o tipo de repositório `Maven` na lista de opções e conclua a configuração inicial;
+- No campo *Set Me Up*, clique no `libs-release`, copie as configurações de distribuição e cole no `pom.xml` dos projetos.
+- Repita o passo acima para o `libs-snapshot`.
+
+### TeamCity
+
+- Acesse o endereço acima relacionado ao Artifactory;
+- Crie a senha do administrador. (TODO: concluir)
