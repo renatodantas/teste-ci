@@ -4,21 +4,17 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.rexus.teste.ci</groupId>
-	<artifactId>ci-modulo-dependencia</artifactId>
+	<artifactId>ci-modulo-2</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
+	<packaging>war</packaging>
 
-	<distributionManagement>
-		<repository>
-			<id>central</id>
-			<name>30f5ab2b0012-releases</name>
-			<url>http://localhost:9001/artifactory/libs-release</url>
-		</repository>
-		<snapshotRepository>
-			<id>snapshots</id>
-			<name>30f5ab2b0012-snapshots</name>
-			<url>http://localhost:9001/artifactory/libs-snapshot</url>
-		</snapshotRepository>
-	</distributionManagement>
+	<dependencies>
+		<dependency>
+			<groupId>com.rexus.teste.ci</groupId>
+			<artifactId>ci-modulo-dependencia</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>
@@ -31,7 +27,13 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.2</version>
+				<configuration>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
-
 </project>

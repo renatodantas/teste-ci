@@ -1,5 +1,17 @@
-
+# Dependencia
 ci-modulo-dependencia/.classpath
 ci-modulo-dependencia/.project
 ci-modulo-dependencia/.settings
 ci-modulo-dependencia/target
+
+# Modulo 1
+ci-modulo-1/.classpath
+ci-modulo-1/.project
+ci-modulo-1/.settings
+ci-modulo-1/target
+
+# Modulo 2
+ci-modulo-2/.classpath
+ci-modulo-2/.project
+ci-modulo-2/.settings
+ci-modulo-2/target

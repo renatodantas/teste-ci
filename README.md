@@ -7,11 +7,11 @@ O intuito deste projeto é testar o fluxo de integração contínua do conjunto 
 ## Overview
 
 Este projeto de teste contém 3 projetos Maven:
-- modulo-dependencia
-- modulo-teste1
-- modulo-teste2
+- ci-modulo-dependencia
+- ci-modulo-1
+- ci-modulo-2
 
-Os projetos `modulo-teste1` e `modulo-teste2` possuem dependência com o projeto `modulo-dependencia`.
+Os projetos `ci-modulo-1` e `ci-modulo-2` possuem dependência com o projeto `ci-modulo-dependencia`.
 
 ### Iniciar e desligar ambientes
 
