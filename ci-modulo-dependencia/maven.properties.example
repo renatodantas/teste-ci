@@ -1,0 +1,17 @@
+# --------------------------------------------------------------
+# Este é o arquivo de exemplo para a configuração
+# do repositório de distribuição. É utilizado pelo
+# plugin "properties-maven-plugin".
+# 
+# Este arquivo deve ser copiado com o nome "maven.properties"
+# e atualizado com as configurações de seu repositório de
+# distribuição.
+# --------------------------------------------------------------
+
+# Releases
+distribution.releases.id = 30f5ab2b0012-releases
+distribution.releases.url = http://localhost:9001/artifactory/libs-release-local
+
+# Snapshots
+distribution.snapshots.id = 30f5ab2b0012-snapshots
+distribution.snapshots.url = http://localhost:9001/artifactory/libs-snapshot-local

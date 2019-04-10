@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -8,17 +9,17 @@
 	<version>1.0.0-SNAPSHOT</version>
 
 	<distributionManagement>
-		<repository>
-			<id>central</id>
-			<name>30f5ab2b0012-releases</name>
-			<url>http://localhost:9001/artifactory/libs-release-local</url>
-		</repository>
-		<snapshotRepository>
-			<id>snapshots</id>
-			<name>30f5ab2b0012-snapshots</name>
-			<url>http://localhost:9001/artifactory/libs-snapshot-local</url>
-		</snapshotRepository>
-	</distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>${distribution.releases.id}</name>
+            <url>${distribution.releases.url}</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>${distribution.snapshots.id}</name>
+            <url>${distribution.snapshots.url}</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 	<build>
 		<plugins>
@@ -31,6 +32,24 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>properties-maven-plugin</artifactId>
+                <version>1.0.0</version>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>read-project-properties</goal>
+                        </goals>
+                        <configuration>
+                            <files>
+                                <file>maven.properties</file>
+                            </files>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 	</build>
 
