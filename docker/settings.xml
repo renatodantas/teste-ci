@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<settings>
+    <mirrors>
+        <mirror>
+            <id>artifactory</id>
+            <name>Artifactory</name>
+            <mirrorOf>*</mirrorOf>
+            <!-- Novo virtual repository -->
+            <url>http://10.0.242.72:9001/artifactory/public</url>
+        </mirror>
+    </mirrors>
+
+    <proxies>
+        <proxy>
+            <id>10.0.242.72</id>
+            <active>true</active>
+            <protocol>http</protocol>
+            <host>127.0.0.1</host>
+            <port>3128</port>
+            <nonProxyHosts>10.*|*.csjt.jus.br|*.redejt|10.0.242.72</nonProxyHosts>
+        </proxy>
+    </proxies>
+
+    <servers>
+        <server>
+            <id>artifactory</id>
+            <username>admin</username>
+            <password>adminadmin</password>
+        </server>
+    </servers>
+</settings>

@@ -9,26 +9,26 @@ services:
     volumes:
       - "artifactory:/var/opt/jfrog/artifactory"
 
-  teamcity:
-    container_name: teste-ci-teamcity
-    image: jetbrains/teamcity-server
-    ports:
-      - "9002:8111"
-    volumes:
-      - "teamcity-data:/data/teamcity_server/datadir"
-      - "teamcity-logs:/opt/teamcity/logs"
-
   gitlab:
     container_name: teste-ci-gitlab
     image: gitlab/gitlab-ce
     ports:
-      - "9003:80"
-      - "9043:443"
+      - "9002:80"
+      - "9042:443"
       - "9022:22"
     volumes:
       - gitlab-config:/etc/gitlab
       - gitlab-logs:/var/log/gitlab
       - gitlab-data:/var/opt/gitlab
+
+  teamcity:
+    container_name: teste-ci-teamcity
+    image: jetbrains/teamcity-server
+    ports:
+      - "9003:8111"
+    volumes:
+      - "teamcity-data:/data/teamcity_server/datadir"
+      - "teamcity-logs:/opt/teamcity/logs"
 
 volumes:
   teamcity-data:
