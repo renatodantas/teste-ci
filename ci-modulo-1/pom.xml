@@ -12,13 +12,13 @@
     <distributionManagement>
         <repository>
             <id>releases</id>
-            <name>${distribution.releases.id}</name>
-            <url>${distribution.releases.url}</url>
+            <name>28ad3fa7716a-releases</name>
+            <url>http://localhost:9001/artifactory/libs-release-local</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
-            <name>${distribution.snapshots.id}</name>
-            <url>${distribution.snapshots.url}</url>
+            <name>28ad3fa7716a-snapshots</name>
+            <url>http://localhost:9001/artifactory/libs-snapshot-local</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -88,24 +88,6 @@
                         </webResource>
                     </webResources>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>properties-maven-plugin</artifactId>
-                <version>1.0.0</version>
-                <executions>
-                    <execution>
-                        <phase>initialize</phase>
-                        <goals>
-                            <goal>read-project-properties</goal>
-                        </goals>
-                        <configuration>
-                            <files>
-                                <file>maven.properties</file>
-                            </files>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

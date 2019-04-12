@@ -2,7 +2,7 @@
 
 if [ -z "$1" ]; then
     echo "[ATENÇÃO] Execute o comando com o nome do projeto."
-    echo "Ex.: ./build ci-modulo-1"
+    echo "Ex.: ./build.sh ci-modulo-1"
     exit 1
 fi
 

@@ -6,14 +6,20 @@
             <name>Artifactory</name>
             <mirrorOf>*</mirrorOf>
             <!-- Novo virtual repository -->
-            <!-- LOCAL: <url>http://artifactory:9001/artifactory/public/</url> -->
-            <url>http://artifactory:8081/artifactory/public/</url>
+
+            <url>http://localhost:9001/artifactory/public/</url>
+            <!-- <url>http://artifactory:8081/artifactory/public/</url> -->
         </mirror>
     </mirrors>
 
     <servers>
         <server>
-            <id>artifactory</id>
+            <id>releases</id>
+            <username>admin</username>
+            <password>adminadmin</password>
+        </server>
+        <server>
+            <id>snapshots</id>
             <username>admin</username>
             <password>adminadmin</password>
         </server>
