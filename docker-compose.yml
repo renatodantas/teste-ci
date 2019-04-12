@@ -2,7 +2,7 @@ version: "3"
 
 services:
   artifactory:
-    container_name: teste-ci-artifactory
+    container_name: artifactory
     image: docker.bintray.io/jfrog/artifactory-oss
     ports:
       - "9001:8081"
@@ -10,7 +10,7 @@ services:
       - "artifactory:/var/opt/jfrog/artifactory"
 
   gitlab:
-    container_name: teste-ci-gitlab
+    container_name: gitlab
     image: gitlab/gitlab-ce
     ports:
       - "9002:80"
@@ -22,13 +22,20 @@ services:
       - gitlab-data:/var/opt/gitlab
 
   teamcity:
-    container_name: teste-ci-teamcity
+    container_name: teamcity
     image: jetbrains/teamcity-server
     ports:
       - "9003:8111"
     volumes:
       - "teamcity-data:/data/teamcity_server/datadir"
       - "teamcity-logs:/opt/teamcity/logs"
+
+  maven:
+    container_name: maven
+    image: maven:3.3-jdk-8-alpine
+    volumes:
+      - "$PWD"/ci-modulo-dependencia:/usr/src/build \
+    -v "$PWD"/docker/settings.xml:/usr/share/maven/ref/settings.xml \
 
 volumes:
   teamcity-data:
