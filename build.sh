@@ -12,4 +12,4 @@ docker run -it --rm \
     -v $PWD/docker/settings-container.xml:/usr/share/maven/ref/settings.xml \
     -w /usr/src/build \
     maven:3.3-jdk-8-alpine \
-    mvn clean install --batch-mode -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+    mvn clean install -U --batch-mode -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn

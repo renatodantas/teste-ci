@@ -12,49 +12,15 @@
     <distributionManagement>
         <repository>
             <id>releases</id>
-            <name>28ad3fa7716a-releases</name>
+            <name>d9a3a8b6a7e8-releases</name>
             <url>http://localhost:9001/artifactory/libs-release-local</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
-            <name>28ad3fa7716a-snapshots</name>
+            <name>d9a3a8b6a7e8-snapshots</name>
             <url>http://localhost:9001/artifactory/libs-snapshot-local</url>
         </snapshotRepository>
     </distributionManagement>
-
-    <repositories>
-        <repository>
-            <id>central</id>
-            <url>http://localhost:9001/artifactory/libs-release</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>snapshots</id>
-            <url>http://localhost:9001/artifactory/libs-snapshot</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository>
-    </repositories>
-    
-    <pluginRepositories>
-        <pluginRepository>
-            <id>central</id>
-            <url>http://[host]:[port]/artifactory/plugins-release</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-            <id>snapshots</id>
-            <url>http://[host]:[port]/artifactory/plugins-snapshot</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </pluginRepository>
-    </pluginRepositories>
 
     <dependencies>
         <dependency>
