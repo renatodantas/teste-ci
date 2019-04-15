@@ -12,12 +12,12 @@
     <distributionManagement>
         <repository>
             <id>releases</id>
-            <name>d9a3a8b6a7e8-releases</name>
+            <name>dfa85e3e41e6-releases</name>
             <url>http://localhost:9001/artifactory/libs-release-local</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
-            <name>d9a3a8b6a7e8-snapshots</name>
+            <name>dfa85e3e41e6-snapshots</name>
             <url>http://localhost:9001/artifactory/libs-snapshot-local</url>
         </snapshotRepository>
     </distributionManagement>
