@@ -8,14 +8,15 @@ DIR_ATUAL=$PWD
 for projeto in "${projetos[@]}"; do
     echo "==> Criando repositorio: $i"
     cd $DIR_ATUAL/$i
-    git init
-    echo target >> .gitignore
-    echo .classpath >> .gitignore 
-    echo .project >> .gitignore 
-    echo .settings >> .gitignore 
-    git add .
-    git commit -m "Primeiro commit"
-    git push --set-upstream http://localhost:9002/root/$i.git master
+    #git init
+    #echo target >> .gitignore
+    #echo .classpath >> .gitignore 
+    #echo .project >> .gitignore 
+    #echo .settings >> .gitignore 
+    #git add .
+    #git commit -m "Primeiro commit"
+    #git push --set-upstream http://localhost:9002/root/$i.git master
+    
 done
 
 echo "==> Finalizado"
