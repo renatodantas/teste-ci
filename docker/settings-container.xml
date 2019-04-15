@@ -13,13 +13,13 @@
     <servers>
         <server>
             <id>releases</id>
-            <username>admin</username>
-            <password>adminadmin</password>
+            <username>${env.MAVEN_REPO_USER}</username>
+            <password>${env.MAVEN_REPO_PASS}</password>
         </server>
         <server>
             <id>snapshots</id>
-            <username>admin</username>
-            <password>adminadmin</password>
+            <username>${env.MAVEN_REPO_USER}</username>
+            <password>${env.MAVEN_REPO_PASS}</password>
         </server>
     </servers>
 </settings>
