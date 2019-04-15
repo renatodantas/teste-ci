@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
-    echo "[ATENÇÃO] Execute o comando com o nome do projeto."
+    echo "[ATENCAO] Execute o comando com o nome do projeto."
     echo "Ex.: ./deploy.sh ci-modulo-1"
     exit 1
 fi

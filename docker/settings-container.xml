@@ -6,9 +6,7 @@
             <name>Artifactory</name>
             <mirrorOf>*</mirrorOf>
             <!-- Novo virtual repository -->
-
-            <url>http://localhost:9001/artifactory/public/</url>
-            <!-- <url>http://artifactory:8081/artifactory/public/</url> -->
+            <url>http://artifactory:8081/artifactory/public/</url>
         </mirror>
     </mirrors>
 

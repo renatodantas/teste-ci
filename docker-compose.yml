@@ -30,12 +30,12 @@ services:
       - "teamcity-data:/data/teamcity_server/datadir"
       - "teamcity-logs:/opt/teamcity/logs"
 
-  maven:
-    container_name: maven
-    image: maven:3.3-jdk-8-alpine
-    volumes:
-      - "$PWD"/ci-modulo-dependencia:/usr/src/build \
-    -v "$PWD"/docker/settings.xml:/usr/share/maven/ref/settings.xml \
+#  maven:
+#    container_name: maven
+#    image: maven:3.3-jdk-8-alpine
+#    volumes:
+#      - ./ci-modulo-dependencia:/usr/src/build
+#      - ./docker/settings.xml:/usr/share/maven/ref/settings.xml
 
 volumes:
   teamcity-data:

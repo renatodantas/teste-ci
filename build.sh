@@ -9,7 +9,7 @@ fi
 docker run -it --rm \
     --network=teste-ci_default \
     -v $PWD/$1:/usr/src/build \
-    -v $PWD/docker/settings.xml:/usr/share/maven/ref/settings.xml \
+    -v $PWD/docker/settings-container.xml:/usr/share/maven/ref/settings.xml \
     -w /usr/src/build \
     maven:3.3-jdk-8-alpine \
     mvn clean install --batch-mode -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
