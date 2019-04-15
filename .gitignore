@@ -21,3 +21,7 @@ ci-modulo-2/maven.propertiestarget
 .classpath
 .project
 .settings
+target
+.classpath
+.project
+.settings
